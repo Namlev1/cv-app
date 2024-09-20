@@ -1,0 +1,10 @@
+textarea{
+    resize: none;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 100px;
+    overflow: hidden;
+    font-family: inherit;
+}

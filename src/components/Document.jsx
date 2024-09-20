@@ -7,10 +7,10 @@ import Name from './Name.jsx'
 import '../styles/Document.css'
 
 function Document({isEditMode}) {
-  return (<div className={`doc grow ${isEditMode ? 'edit-mode' : ''}`}>
+  return (<div className={`doc grow shadow ${isEditMode ? 'edit-mode' : ''}`}>
+    <Name isDisabled={!isEditMode}/>
     <div className={'flex-col doc-col'}>
-      <Name isDisabled={!isEditMode}/>
-      <Description></Description>
+      <Description/>
       <Contact />
       <List />
       <List />

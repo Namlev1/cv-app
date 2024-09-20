@@ -1,12 +1,22 @@
 .doc{
     background-color: white;
     width: 100%;
-    padding: 4rem;
+    padding: 8rem 6rem;
     box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
+    gap: 3rem;
+
 }
 
 .doc-col{
     gap: 1rem;
+}
+
+.doc *{
+    border-color: grey;
 }
 
 .doc:not(.edit-mode) *{
