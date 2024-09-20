@@ -1,0 +1,14 @@
+.doc{
+    background-color: white;
+    width: 100%;
+    padding: 4rem;
+    box-sizing: border-box;
+}
+
+.doc-col{
+    gap: 1rem;
+}
+
+.doc:not(.edit-mode) *{
+    border-color: transparent;
+}

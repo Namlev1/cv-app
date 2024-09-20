@@ -7,7 +7,7 @@ function App() {
   const [isEditMode, setIsEditMode] = useState(true)
   return (<>
     <ButtonList isEditMode={isEditMode} setIsEditMode={setIsEditMode} />
-    <Document />
+    <Document isEditMode={isEditMode}/>
   </>)
 }
 

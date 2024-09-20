@@ -17,6 +17,13 @@ body{
 
 .flex-row{
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.grow{
+  flex-grow: 1;
 }

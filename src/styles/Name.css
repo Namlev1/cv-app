@@ -1,0 +1,14 @@
+.name{
+    appearance: none;
+    font-family: "Courier New", Courier, monospace;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-size: 3rem;
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name:disabled{
+    color: inherit;
+}

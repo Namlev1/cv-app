@@ -6,9 +6,10 @@ function ButtonList({ isEditMode, setIsEditMode }) {
     setIsEditMode(!isEditMode)
   }
 
-  return (<div className={'flex-row'}>
+  return (<div className={'flex-row btn-list'}>
     <Button text={'Edit'} isDisabled={isEditMode} onClick={toggleEditMode} />
     <Button text={'Submit'} isDisabled={!isEditMode} onClick={toggleEditMode} />
+    <div className="grow" ></div>
     <Button text={'Download'} />
   </div>)
 
