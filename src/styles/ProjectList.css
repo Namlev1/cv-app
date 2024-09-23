@@ -1,0 +1,36 @@
+.projects > ul{
+    padding: 0;
+    list-style: none;
+}
+
+.projects li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project{
+    border: 1px solid rgba(66, 68, 90, 1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.doc:not(.edit-mode) .project{
+    padding: 0;
+}
+
+.proj-name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.projects textarea{
+    min-height: auto;
+}
+
+.projects li.add-btn{
+    align-self: flex-start;
+}
