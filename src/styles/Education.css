@@ -1,0 +1,36 @@
+.education > ul{
+    padding: 0;
+    list-style: none;
+}
+
+.education li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edu-element{
+    border: 1px solid rgba(66, 68, 90, 1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.doc:not(.edit-mode) .edu-element{
+    padding: 0;
+}
+
+.edu-time{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.education textarea{
+    min-height: auto;
+}
+
+.education li.add-btn{
+    align-self: flex-start;
+}
