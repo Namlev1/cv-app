@@ -1,7 +1,7 @@
 .doc{
     background-color: white;
     width: 100%;
-    padding: 8rem 6rem;
+    padding: 6rem 4rem;
     box-sizing: border-box;
 
     display: grid;
@@ -12,7 +12,7 @@
 }
 
 .doc-col{
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .doc *{

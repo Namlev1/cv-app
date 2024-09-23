@@ -1,0 +1,42 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+    box-sizing: border-box;
+    padding-left: 1.3rem;
+}
+
+li input{
+    width: 100%;
+}
+
+.add-btn{
+    list-style-type: none;
+}
+
+.add-btn > button{
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    transition: background-color ease-in-out .3s, border ease-in-out .3s;
+}
+
+.add-btn > button:before{
+    content: "+";
+    position: absolute;
+    left: -20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.add-btn > button:hover{
+    background-color: #e1e4e4;
+    border: 1px solid black;
+}

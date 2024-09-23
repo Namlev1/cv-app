@@ -12,14 +12,14 @@ function Document({isEditMode}) {
     <div className={'flex-col doc-col'}>
       <Description/>
       <Contact />
-      <List />
-      <List />
+      <List header={'Tech-stack'}/>
+      <List header={'Skills'}/>
     </div>
     <div className={'flex-col doc-col'}>
       <Education />
       <ProjectList />
-      <List />
-      <List />
+      <List header={'Languages'}/>
+      <List header={'Hobby'}/>
     </div>
   </div>)
 }
