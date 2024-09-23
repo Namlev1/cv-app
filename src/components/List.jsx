@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import '../styles/List.css'
+import {EditModeContext} from '../context/EditModeContext'
 
 function List({ header }) {
+  const {isEditMode} = useContext(EditModeContext)
   const [elements, setElements] = useState([])
   const addElement = () => {
     setElements([...elements, ''])
@@ -10,11 +12,11 @@ function List({ header }) {
       <h2>{header}</h2>
       <ul>
         {elements.map((item, index) => (<li key={index}>
-            <input type={'text'} />
+            <input type={'text'} disabled={!isEditMode}/>
           </li>))}
-        <li className={'add-btn'}>
+        {isEditMode && <li className={'add-btn'}>
           <button onClick={addElement}>Add new element</button>
-        </li>
+        </li>}
       </ul>
     </div>)
 

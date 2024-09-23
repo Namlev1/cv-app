@@ -1,13 +1,14 @@
 import '../styles/App.css'
 import ButtonList from './ButtonList.jsx'
 import Document from './Document.jsx'
-import { useState } from 'react'
+import { EditModeProvider } from '../context/EditModeContext.jsx'
 
 function App() {
-  const [isEditMode, setIsEditMode] = useState(true)
   return (<>
-    <ButtonList isEditMode={isEditMode} setIsEditMode={setIsEditMode} />
-    <Document isEditMode={isEditMode}/>
+    <EditModeProvider>
+      <ButtonList />
+      <Document />
+    </EditModeProvider>
   </>)
 }
 

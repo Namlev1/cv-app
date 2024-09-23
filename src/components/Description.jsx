@@ -1,7 +1,10 @@
 import '../styles/Description.css'
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
+import {EditModeContext} from "../context/EditModeContext"
 
 function Description() {
+  const {isEditMode} = useContext(EditModeContext)
+
   const [text, setText] = useState('')
   const textareaRef = useRef(null)
 
@@ -26,7 +29,8 @@ function Description() {
     ref={textareaRef}
     value={text}
     onChange={handleInput}
-    placeholder="Enter a description..."
+    placeholder={isEditMode ? "Enter a description..." : ''}
+    disabled={!isEditMode}
   />)
 }
 

@@ -1,7 +1,10 @@
 import Button from './Button.jsx'
 import '../styles/ButtonList.css'
+import {EditModeContext} from '../context/EditModeContext.jsx'
+import { useContext } from 'react'
 
-function ButtonList({ isEditMode, setIsEditMode }) {
+function ButtonList() {
+  const {isEditMode, setIsEditMode} = useContext(EditModeContext)
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode)
   }

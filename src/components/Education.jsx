@@ -1,8 +1,10 @@
 import '../styles/Education.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import {EditModeContext} from '../context/EditModeContext'
 
 function Education() {
   const [elements, setElements] = useState([])
+  const {isEditMode} = useContext(EditModeContext)
 
   const addElement = () => {
     setElements([...elements, ''])
@@ -26,9 +28,9 @@ function Education() {
             <textarea className={'edu-diploma'} onChange={adjustHeight} placeholder={'Enter course name'}></textarea>
           </div>
         </li>))}
-        <li className={'add-btn'}>
+        {isEditMode && <li className={'add-btn'}>
           <button onClick={addElement}>Add new element</button>
-        </li>
+        </li>}
 
       </ul>
     </div>)

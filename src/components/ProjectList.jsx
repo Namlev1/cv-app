@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import '../styles/ProjectList.css'
+import { EditModeContext } from '../context/EditModeContext'
 
 function ProjectList() {
   const [elements, setElements] = useState([])
+  const { isEditMode } = useContext(EditModeContext)
 
   const addElement = () => {
     setElements([...elements, ''])
@@ -21,17 +23,18 @@ function ProjectList() {
     <ul>
       {elements.map((item, index) => (<li key={index}>
         <div className="project">
-          <input type="text" className={'proj-name'} placeholder={'Enter name...'} />
-          <textarea className={'project-desc'} onChange={adjustHeight} placeholder={'Enter description...'}></textarea>
+          <input type="text" className={'proj-name'} placeholder={'Enter name...'} disabled={!isEditMode} />
+          <textarea className={'project-desc'} onChange={adjustHeight} placeholder={'Enter description...'}
+                    disabled={!isEditMode}></textarea>
         </div>
       </li>))}
-      <li className={'add-btn'}>
+      {isEditMode && <li className={'add-btn'}>
         <button onClick={addElement}>Add new element</button>
-      </li>
+      </li>}
 
     </ul>
   </div>)
 
 }
 
-export default ProjectList;
+export default ProjectList

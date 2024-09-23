@@ -5,8 +5,11 @@ import Education from './Education.jsx'
 import ProjectList from './ProjectList.jsx'
 import Name from './Name.jsx'
 import '../styles/Document.css'
+import {EditModeContext} from '../context/EditModeContext.jsx'
+import { useContext } from 'react'
 
-function Document({isEditMode}) {
+function Document() {
+  const {isEditMode} = useContext(EditModeContext)
   return (<div className={`doc grow shadow ${isEditMode ? 'edit-mode' : ''}`}>
     <Name isDisabled={!isEditMode}/>
     <div className={'flex-col doc-col'}>
