@@ -18,7 +18,9 @@ function ButtonList() {
       const imgData = canvas.toDataURL('image/png')
 
       const pdf = new jsPDF({
-        orientation: 'portrait', unit: 'px', format: 'a4'
+        orientation: 'portrait',
+        unit: 'px',
+        format: 'a4'
       })
       const width = pdf.internal.pageSize.getWidth()
       const height = (canvas.height * width) / canvas.width
@@ -30,13 +32,22 @@ function ButtonList() {
     }
   }
 
-  return (<div className={'flex-row btn-list'}>
-    <Button text={'Edit'} isDisabled={isEditMode} onClick={toggleEditMode} />
-    <Button text={'Submit'} isDisabled={!isEditMode} onClick={toggleEditMode} />
-    <div className="grow"></div>
-    <Button text={'Download'} isDisabled={isEditMode} onClick={handleGeneratePdf} />
-  </div>)
-
+  return (
+    <div className={'flex-row btn-list'}>
+      <Button text={'Edit'} isDisabled={isEditMode} onClick={toggleEditMode} />
+      <Button
+        text={'Submit'}
+        isDisabled={!isEditMode}
+        onClick={toggleEditMode}
+      />
+      <div className="grow"></div>
+      <Button
+        text={'Download'}
+        isDisabled={isEditMode}
+        onClick={handleGeneratePdf}
+      />
+    </div>
+  )
 }
 
 export default ButtonList

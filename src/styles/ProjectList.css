@@ -33,4 +33,5 @@
 
 .projects li.add-btn{
     align-self: flex-start;
+    padding-left: 1.3rem;
 }

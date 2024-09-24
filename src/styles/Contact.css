@@ -1,6 +1,7 @@
 #contact{
     border-left: 4px solid black;
     padding-left: 1rem;
+    margin: 2rem 0;
 }
 
 #contact > label{
