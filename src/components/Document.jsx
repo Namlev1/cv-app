@@ -10,7 +10,7 @@ import { useContext } from 'react'
 
 function Document() {
   const {isEditMode} = useContext(EditModeContext)
-  return (<div className={`doc grow shadow ${isEditMode ? 'edit-mode' : ''}`}>
+  return (<div className={`doc grow ${isEditMode ? 'edit-mode' : ''}`}>
     <Name isDisabled={!isEditMode}/>
     <div className={'flex-col doc-col'}>
       <Description/>
