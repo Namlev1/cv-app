@@ -1,18 +1,13 @@
 .doc{
     background-color: white;
     width: 100%;
-    padding: 6rem 4rem;
+    padding: clamp(16px, 5vw, 6rem) clamp(16px, 4vw, 4rem);
     box-sizing: border-box;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr;
     gap: 3rem;
-
-}
-
-.doc-col{
-    /*gap: 2rem;*/
 }
 
 .doc *{
@@ -21,4 +16,10 @@
 
 .doc:not(.edit-mode) *{
     border-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .doc{
+        grid-template-columns: 1fr;
+    }
 }

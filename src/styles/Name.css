@@ -13,3 +13,9 @@
 .name:disabled{
     color: inherit;
 }
+
+@media (max-width: 600px) {
+    .name{
+        grid-column: 1/2;
+    }
+}

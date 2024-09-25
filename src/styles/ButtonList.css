@@ -2,3 +2,18 @@
     gap: 2rem;
     width: 60%;
 }
+
+@media (max-width: 1080px) {
+    .btn-list{
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-list{
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}
